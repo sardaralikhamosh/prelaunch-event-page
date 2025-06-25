@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventZen - Launching Soon</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .hero-section {
+            min-height: 100vh;
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('img/bg.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+/*            background: rgba(255, 255, 255, 0.9);*/
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            margin-bottom: 2rem;
+        }
+        
+        .logo-symbol {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: #8B4513;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+        
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 500;
+            color: #2c2c2c;
+            margin-bottom: 0.5rem;
+            letter-spacing: 6px;
+        }
+        
+        .tagline {
+            font-size: 0.9rem;
+            color: #666;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+        
+        .main-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 400;
+            color: #8B4513;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+        
+        .sub-heading {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        
+        .notify-btn {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 2px solid #ddd;
+            color: #666;
+            padding: 12px 40px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            margin-bottom: 3rem;
+        }
+        
+        .notify-btn:hover {
+            background-color: #8B4513;
+            border-color: #8B4513;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(139, 69, 19, 0.3);
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #8B4513;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-icon:hover {
+            background-color: #A0522D;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.4);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-content {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+            
+            .logo-symbol {
+                font-size: 2.5rem;
+            }
+            
+            .brand-name {
+                font-size: 2rem;
+                letter-spacing: 4px;
+            }
+            
+            .main-heading {
+                font-size: 3rem;
+            }
+            
+            .tagline {
+                letter-spacing: 2px;
+                font-size: 0.8rem;
+            }
+            
+            .sub-heading {
+                font-size: 1rem;
+            }
+            
+            .hero-section {
+                background-attachment: scroll;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-heading {
+                font-size: 2.5rem;
+            }
+            
+            .brand-name {
+                font-size: 1.8rem;
+                letter-spacing: 3px;
+            }
+            
+            .notify-btn {
+                padding: 10px 30px;
+                font-size: 0.8rem;
+            }
+            
+            .social-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+        }
+        
+        /* Subtle animations */
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .social-icons {
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="logo">
+                <div class="logo-symbol">
+                    <img src="img/logo.png">
+                </div>
+                <!-- <h1 class="brand-name">EVENTZEN</h1> -->
+                <p class="tagline">Crafting Unforgettable Memories</p>
+            </div>
+            
+            <h2 class="main-heading">Launching<br>soon!</h2>
+            
+            <p class="sub-heading">We are currently making some<br>improvements to our website!</p>
+            
+            <button class="btn notify-btn">Notify Me</button>
+            
+            <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add some interactive functionality
+        document.querySelector('.notify-btn').addEventListener('click', function() {
+            // You can add email collection functionality here
+            alert('Thank you for your interest! We\'ll notify you when we launch.');
+        });
+        
+        // Smooth scroll effect for social icons
+        document.querySelectorAll('.social-icon').forEach(icon => {
+            icon.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.05)';
+            });
+            
+            icon.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

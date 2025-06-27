@@ -1,4 +1,9 @@
- @font-face {
+/* 
+Copyright © 2025 Sardar Ali
+Licensed under the MIT License.
+*/
+
+@font-face {
     font-family: 'Season';
     src: url('./font/TheSeasons.ttf') format('truetype');
     font-weight: normal;
@@ -16,7 +21,7 @@
         
         .hero-section {
             min-height: 100vh;
-            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../img/bg.webp');
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../img/bg-banner.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
